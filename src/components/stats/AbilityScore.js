@@ -1,10 +1,10 @@
-
+import {Container} from "../styles/Container.styled";
 
 function AbilityScore({type}) {
     return(
-        <div>
+        <Container>
             {type}
-        </div>
+        </Container>
     );
 }
 
