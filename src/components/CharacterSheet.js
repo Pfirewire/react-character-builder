@@ -6,8 +6,10 @@ import Body from "./Body";
 function CharacterSheet() {
     return(
         <CenteredContainer>
-            <Header />
-            <Body />
+            <CharacterSheetWrapper>
+                <Header />
+                <Body />
+            </CharacterSheetWrapper>
         </CenteredContainer>
     );
 }
@@ -15,5 +17,7 @@ function CharacterSheet() {
 export default CharacterSheet;
 
 const CharacterSheetWrapper = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
