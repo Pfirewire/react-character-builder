@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import NameAndLogo from "./NameAndLogo";
-import QuickInfo from "./QuickInfo";
+import QuickInfo from "./quick-info/QuickInfo";
 
 function Header() {
     return(
