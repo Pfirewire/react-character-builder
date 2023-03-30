@@ -1,4 +1,4 @@
-import AbilityScoreContainer from "./components/stats/AbilityScoreContainer";
+import CharacterSheet from "./components/CharacterSheet";
 
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
         <div>
             Character Builder App Incoming!
             <br/><br/><br/><br/>
-            <AbilityScoreContainer />
+            <CharacterSheet />
         </div>
     );
 }

@@ -1,19 +1,16 @@
 import AbilityScore from "./AbilityScore";
-import {Container} from "../styles/Container.styled";
 import styled from "styled-components";
 
 function AbilityScoreContainer() {
     return(
-        <Container>
-            <AbilityScoreWrapper>
-                <AbilityScore type={'STR'} />
-                <AbilityScore type={'DEX'} />
-                <AbilityScore type={'CON'} />
-                <AbilityScore type={'WIS'} />
-                <AbilityScore type={'INT'} />
-                <AbilityScore type={'CHA'} />
-            </AbilityScoreWrapper>
-        </Container>
+        <AbilityScoreWrapper>
+            <AbilityScore type={'STR'} />
+            <AbilityScore type={'DEX'} />
+            <AbilityScore type={'CON'} />
+            <AbilityScore type={'WIS'} />
+            <AbilityScore type={'INT'} />
+            <AbilityScore type={'CHA'} />
+        </AbilityScoreWrapper>
     );
 }
 
@@ -21,4 +18,5 @@ export default AbilityScoreContainer;
 
 const AbilityScoreWrapper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
