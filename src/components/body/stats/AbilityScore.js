@@ -13,6 +13,7 @@ export default AbilityScore;
 const AbilityScoreContainer = styled.div`
   width: 80px;
   height: 100px;
-  border: 2px solid black;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

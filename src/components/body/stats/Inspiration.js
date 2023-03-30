@@ -11,5 +11,5 @@ function Inspiration() {
 export default Inspiration;
 
 const InspirationWrapper = styled.div`
-  height: 50px;
+  height: 60px;
 `;

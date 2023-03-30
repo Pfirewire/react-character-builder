@@ -11,5 +11,5 @@ function ProficiencyBonus() {
 export default ProficiencyBonus;
 
 const ProficiencyBonusWrapper = styled.div`
-  height: 50px;
+  height: 60px;
 `;
