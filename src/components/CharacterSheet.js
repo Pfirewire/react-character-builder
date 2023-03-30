@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {CenteredContainer} from "./styles/CenteredContainer.styled";
 import Header from "./header/Header";
-import Body from "./Body";
+import Body from "./body/Body";
 
 function CharacterSheet() {
     return(
