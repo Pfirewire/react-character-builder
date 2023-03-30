@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-function Component() {
+function Logo() {
     return(
         <ComponentWrapper>
-            Component
+            DnD Logo
         </ComponentWrapper>
     );
 }
 
-export default Component;
+export default Logo;
 
 const ComponentWrapper = styled.div`
-
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;

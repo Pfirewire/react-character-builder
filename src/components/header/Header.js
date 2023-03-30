@@ -14,5 +14,9 @@ function Header() {
 export default Header;
 
 const HeaderWrapper = styled.div`
-  
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100px;
+  width: 100%;
 `;
