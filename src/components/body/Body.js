@@ -1,15 +1,21 @@
 import styled from "styled-components";
 import AbilityScoreContainer from "./stats/AbilityScoreContainer";
 import OtherAbilityStats from "./stats/OtherAbilityStats";
+import PassiveStats from "./stats/PassiveStats";
+import OtherProficiencies from "./stats/OtherProficiencies";
 
 function Body() {
     return(
         <BodyWrapper>
             <BodyColumn>
-                <LeftStatsWrapper>
+                <LeftStatsTopWrapper>
                     <AbilityScoreContainer />
                     <OtherAbilityStats />
-                </LeftStatsWrapper>
+                </LeftStatsTopWrapper>
+                <LeftStatsBottomWrapper>
+                    <PassiveStats />
+                    <OtherProficiencies />
+                </LeftStatsBottomWrapper>
             </BodyColumn>
             <BodyColumn>
                 Middle Column
@@ -30,10 +36,19 @@ const BodyWrapper = styled.div`
 
 const BodyColumn = styled.div`
   width: 320px;
+  display: flex;
+  flex-direction: column;
 `;
 
-const LeftStatsWrapper = styled.div`
+const LeftStatsTopWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: stretch;
+`;
+
+const LeftStatsBottomWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
 `;
