@@ -11,5 +11,5 @@ function OtherProficiencies() {
 export default OtherProficiencies;
 
 const OtherProficienciesWrapper = styled.div`
-
+  height: 250px;
 `;

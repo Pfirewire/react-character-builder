@@ -11,5 +11,5 @@ function PassiveStats() {
 export default PassiveStats;
 
 const PassiveStatsWrapper = styled.div`
-
+  height: 60px;
 `;
