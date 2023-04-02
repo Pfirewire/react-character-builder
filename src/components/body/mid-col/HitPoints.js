@@ -11,5 +11,6 @@ function HitPoints() {
 export default HitPoints;
 
 const HitPointsWrapper = styled.div`
-
+  width: 100%;
+  height: 240px;
 `;

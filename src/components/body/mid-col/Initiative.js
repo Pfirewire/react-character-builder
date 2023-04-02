@@ -11,5 +11,5 @@ function Initiative() {
 export default Initiative;
 
 const InitiativeWrapper = styled.div`
-
+  flex-grow: 1;
 `;

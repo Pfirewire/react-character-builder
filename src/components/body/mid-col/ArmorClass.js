@@ -11,5 +11,5 @@ function ArmorClass() {
 export default ArmorClass;
 
 const ArmorClassWrapper = styled.div`
-
+  flex-grow: 1;
 `;

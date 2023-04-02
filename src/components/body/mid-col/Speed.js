@@ -11,5 +11,5 @@ function Speed() {
 export default Speed;
 
 const SpeedWrapper = styled.div`
-
+  flex-grow: 1;
 `;
