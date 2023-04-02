@@ -11,5 +11,5 @@ function AttacksAndSpellcasting() {
 export default AttacksAndSpellcasting;
 
 const AttacksAndSpellcastingWrapper = styled.div`
-
+  height: 241px;
 `;

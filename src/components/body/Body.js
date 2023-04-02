@@ -9,6 +9,8 @@ import Speed from "./mid-col/Speed";
 import HitPoints from "./mid-col/HitPoints";
 import HitDice from "./mid-col/HidDice";
 import DeathSaves from "./mid-col/DeathSaves";
+import AttacksAndSpellcasting from "./mid-col/AttacksAndSpellcasting";
+import Equipment from "./mid-col/Equipment";
 
 function Body() {
     return(
@@ -34,6 +36,8 @@ function Body() {
                     <HitDice />
                     <DeathSaves />
                 </HitDiceAndDeathSavesWrapper>
+                <AttacksAndSpellcasting />
+                <Equipment />
             </BodyColumn>
             <BodyColumn>
                 Right Column

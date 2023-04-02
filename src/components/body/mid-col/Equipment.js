@@ -11,5 +11,5 @@ function Equipment() {
 export default Equipment;
 
 const EquipmentWrapper = styled.div`
-
+  height: 241px;
 `;
