@@ -11,5 +11,5 @@ function HitDice() {
 export default HitDice;
 
 const HitDiceWrapper = styled.div`
-
+  flex-grow: 1;
 `;

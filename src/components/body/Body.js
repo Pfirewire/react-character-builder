@@ -7,6 +7,8 @@ import ArmorClass from "./mid-col/ArmorClass";
 import Initiative from "./mid-col/Initiative";
 import Speed from "./mid-col/Speed";
 import HitPoints from "./mid-col/HitPoints";
+import HitDice from "./mid-col/HidDice";
+import DeathSaves from "./mid-col/DeathSaves";
 
 function Body() {
     return(
@@ -28,6 +30,10 @@ function Body() {
                     <Speed />
                 </ACArmorAndSpeedWrapper>
                 <HitPoints />
+                <HitDiceAndDeathSavesWrapper>
+                    <HitDice />
+                    <DeathSaves />
+                </HitDiceAndDeathSavesWrapper>
             </BodyColumn>
             <BodyColumn>
                 Right Column
@@ -63,6 +69,12 @@ const LeftStatsBottomWrapper = styled.div`
 `;
 
 const ACArmorAndSpeedWrapper = styled.div`
+  display: flex;
+  height: 100px;
+  align-items: stretch;
+`;
+
+const HitDiceAndDeathSavesWrapper = styled.div`
   display: flex;
   height: 100px;
   align-items: stretch;

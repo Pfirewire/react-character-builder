@@ -11,5 +11,5 @@ function DeathSaves() {
 export default DeathSaves;
 
 const DeathSavesWrapper = styled.div`
-
+  flex-grow: 1;
 `;
