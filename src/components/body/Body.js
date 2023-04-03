@@ -2,15 +2,14 @@ import styled from "styled-components";
 import LeftBodyColumn from "./stats/LeftBodyColumn";
 import {BodyColumn} from "../styles/BodyColumn.styled";
 import MiddleBodyColumn from "./mid-col/MiddleBodyColumn";
+import RightBodyColumn from "./right-col/RightBodyColumn";
 
 function Body() {
     return(
         <BodyWrapper>
             <LeftBodyColumn />
             <MiddleBodyColumn />
-            <BodyColumn>
-                Right Column
-            </BodyColumn>
+            <RightBodyColumn />
         </BodyWrapper>
     );
 }
