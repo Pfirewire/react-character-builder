@@ -11,5 +11,5 @@ function Flaws() {
 export default Flaws;
 
 const FlawsWrapper = styled.div`
-
+  height: 110px;
 `;

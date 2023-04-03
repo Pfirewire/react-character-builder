@@ -11,5 +11,5 @@ function Bonds() {
 export default Bonds;
 
 const BondsWrapper = styled.div`
-
+  height: 110px;
 `;

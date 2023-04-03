@@ -11,5 +11,5 @@ function Ideals() {
 export default Ideals;
 
 const IdealsWrapper = styled.div`
-
+  height: 110px;
 `;

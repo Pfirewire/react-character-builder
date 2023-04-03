@@ -11,5 +11,5 @@ function FeaturesAndTraits() {
 export default FeaturesAndTraits;
 
 const FeaturesAndTraitsWrapper = styled.div`
-
+  height: 478px;
 `;

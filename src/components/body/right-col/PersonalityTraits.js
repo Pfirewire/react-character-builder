@@ -11,5 +11,5 @@ function PersonalityTraits() {
 export default PersonalityTraits;
 
 const PersonalityTraitsWrapper = styled.div`
-
+  height: 110px;
 `;
