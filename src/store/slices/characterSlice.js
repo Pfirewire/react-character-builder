@@ -15,14 +15,14 @@ const characterSlice = createSlice({
         ],
     },
     reducers: {
-        updateCharacterName(state, action) {
+        setCharacterName(state, action) {
             state.characterName = action;
         },
     },
 });
 
 export const {
-    updateCharacterName
+    setCharacterName
 } = characterSlice.actions;
 
-export const characterSliceReducer = characterSlice.reducer;
+export const characterReducer = characterSlice.reducer;

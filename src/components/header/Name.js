@@ -1,9 +1,19 @@
 import styled from "styled-components";
+import {useSelector, useDispatch} from "react-redux";
+import {setCharacterName} from "../../store";
 
 function Name() {
+    const dispatch = useDispatch();
+    const {characterName} = useSelector(state => state.character);
+
+    const handleChange = (e) => {
+        dispatch(setCharacterName(e.target.value));
+    };
+
     return(
         <NameWrapper>
-            Character Name
+            <label>Character Name: </label>
+            <input value={characterName} onChange={handleChange} />
         </NameWrapper>
     );
 }
