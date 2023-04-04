@@ -20,3 +20,9 @@ const characterSlice = createSlice({
         },
     },
 });
+
+export const {
+    updateCharacterName
+} = characterSlice.actions;
+
+export const characterSliceReducer = characterSlice.reducer;
