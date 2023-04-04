@@ -16,7 +16,7 @@ const characterSlice = createSlice({
     },
     reducers: {
         setCharacterName(state, action) {
-            state.characterName = action;
+            state.characterName = action.payload;
         },
     },
 });
