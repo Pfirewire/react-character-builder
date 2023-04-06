@@ -18,6 +18,27 @@ const characterSlice = createSlice({
         setCharacterName(state, action) {
             state.characterName = action.payload;
         },
+        setClassAndLevel(state, action) {
+            state.classAndLevel = action.payload;
+        },
+        setBackground(state, action) {
+            state.background = action.payload;
+        },
+        setPlayerName(state, action) {
+            state.playerName = action.payload;
+        },
+        setRace(state, action) {
+            state.race = action.payload;
+        },
+        setAlignment(state, action) {
+            state.alignment = action.payload;
+        },
+        setXP(state, action) {
+            state.xp[0] = action.payload;
+        },
+        setXPMax(state, action) {
+            state.xp[1] = action.payload;
+        }
     },
 });
 
