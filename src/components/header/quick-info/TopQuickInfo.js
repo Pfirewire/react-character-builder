@@ -7,6 +7,9 @@ import {
     setBackground,
     setPlayerName,
 } from "../../../store/slices/characterSlice";
+import ClassAndLevel from "./ClassAndLevel";
+import Background from "./Background";
+import PlayerName from "./PlayerName";
 
 function TopQuickInfo() {
     const dispatch = useDispatch();
@@ -14,13 +17,13 @@ function TopQuickInfo() {
     return(
         <TopQuickInfoWrapper>
             <QuickInfoWrapper>
-                Class & Level
+                <ClassAndLevel />
             </QuickInfoWrapper>
             <QuickInfoWrapper>
-                Background
+                <Background />
             </QuickInfoWrapper>
             <QuickInfoWrapper>
-                Player Name
+                <PlayerName />
             </QuickInfoWrapper>
         </TopQuickInfoWrapper>
     );
