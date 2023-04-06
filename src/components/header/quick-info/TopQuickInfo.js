@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import {QuickInfoWrapper} from "../../styles/QuickInfoWrapper.styled";
 import {useSelector, useDispatch} from "react-redux";
-import {
-    setClass,
-    setLevel,
-    setBackground,
-    setPlayerName,
-} from "../../../store/slices/characterSlice";
 import ClassAndLevel from "./ClassAndLevel";
 import Background from "./Background";
 import PlayerName from "./PlayerName";
