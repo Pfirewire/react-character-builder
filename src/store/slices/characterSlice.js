@@ -4,7 +4,7 @@ const characterSlice = createSlice({
     name: 'character',
     initialState: {
         characterName: '',
-        class: '',
+        characterClass: '',
         level: 1,
         background: '',
         playerName: '',
@@ -19,8 +19,8 @@ const characterSlice = createSlice({
         setCharacterName(state, action) {
             state.characterName = action.payload;
         },
-        setClass(state, action) {
-            state.class = action.payload;
+        setCharacterClass(state, action) {
+            state.characterClass = action.payload;
         },
         setLevel(state, action) {
             state.level = action.payload;
@@ -48,7 +48,7 @@ const characterSlice = createSlice({
 
 export const {
     setCharacterName,
-    setClass,
+    setCharacterClass,
     setLevel,
     setBackground,
     setPlayerName,

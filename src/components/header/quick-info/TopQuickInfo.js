@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import {QuickInfoWrapper} from "../../styles/QuickInfoWrapper.styled";
-import {useSelector, useDispatch} from "react-redux";
 import ClassAndLevel from "./ClassAndLevel";
 import Background from "./Background";
 import PlayerName from "./PlayerName";
 
 function TopQuickInfo() {
-    const dispatch = useDispatch();
-    const {characterName} = useSelector(state => state.character);
     return(
         <TopQuickInfoWrapper>
             <QuickInfoWrapper>
