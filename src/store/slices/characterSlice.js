@@ -4,7 +4,8 @@ const characterSlice = createSlice({
     name: 'character',
     initialState: {
         characterName: '',
-        classAndLevel: '',
+        class: '',
+        level: 1,
         background: '',
         playerName: '',
         race: '',
@@ -18,8 +19,11 @@ const characterSlice = createSlice({
         setCharacterName(state, action) {
             state.characterName = action.payload;
         },
-        setClassAndLevel(state, action) {
-            state.classAndLevel = action.payload;
+        setClass(state, action) {
+            state.class = action.payload;
+        },
+        setLevel(state, action) {
+            state.level = action.payload;
         },
         setBackground(state, action) {
             state.background = action.payload;
@@ -43,7 +47,15 @@ const characterSlice = createSlice({
 });
 
 export const {
-    setCharacterName
+    setCharacterName,
+    setClass,
+    setLevel,
+    setBackground,
+    setPlayerName,
+    setRace,
+    setAlignment,
+    setXP,
+    setXPMax,
 } = characterSlice.actions;
 
 export const characterReducer = characterSlice.reducer;
