@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {setBackground} from "../../../store/slices/characterSlice";
 import {useDispatch, useSelector} from "react-redux";
+import {BiggerInput} from "../../styles/BiggerInput.styled";
 
 function Background() {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ function Background() {
     return(
         <BackgroundWrapper>
             <label>Background:</label>
-            <input value={background} onChange={handleBackgroundChange} />
+            <BiggerInput value={background} onChange={handleBackgroundChange} />
         </BackgroundWrapper>
     );
 }

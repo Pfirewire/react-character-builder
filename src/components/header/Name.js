@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {useSelector, useDispatch} from "react-redux";
 import {setCharacterName} from "../../store";
+import {BiggerInput} from "../styles/BiggerInput.styled";
 
 function Name() {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ function Name() {
     return(
         <NameWrapper>
             <label>Character Name: </label>
-            <input value={characterName} onChange={handleChange} />
+            <BiggerInput value={characterName} onChange={handleChange} />
         </NameWrapper>
     );
 }

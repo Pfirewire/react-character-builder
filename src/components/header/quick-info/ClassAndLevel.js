@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";
 import {setCharacterClass, setLevel} from "../../../store/slices/characterSlice";
+import {BiggerInput} from "../../styles/BiggerInput.styled";
 
 function ClassAndLevel() {
     const dispatch = useDispatch();
@@ -17,11 +18,11 @@ function ClassAndLevel() {
     return(
         <ClassAndLevelWrapper>
             <ClassWrapper>
-                <input value={characterClass} onChange={handleCharacterClassChange} />
+                <BiggerInput value={characterClass} onChange={handleCharacterClassChange} />
                 <label>Class</label>
             </ClassWrapper>
             <LevelWrapper>
-                <input type={"number"} max={20} value={level} onChange={handleLevelChange} />
+                <BiggerInput type={"number"} max={20} value={level} onChange={handleLevelChange} />
                 <label>Level</label>
             </LevelWrapper>
         </ClassAndLevelWrapper>
