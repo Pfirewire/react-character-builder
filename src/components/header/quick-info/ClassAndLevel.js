@@ -17,12 +17,12 @@ function ClassAndLevel() {
     return(
         <ClassAndLevelWrapper>
             <ClassWrapper>
-                <label>Class:</label>
                 <input value={characterClass} onChange={handleCharacterClassChange} />
+                <label>Class</label>
             </ClassWrapper>
             <LevelWrapper>
-                <label>Level:</label>
                 <input type={"number"} max={20} value={level} onChange={handleLevelChange} />
+                <label>Level</label>
             </LevelWrapper>
         </ClassAndLevelWrapper>
     );
@@ -33,8 +33,6 @@ export default ClassAndLevel;
 const ClassAndLevelWrapper = styled.div`
   height: 100%;
   display: flex;
-  flex-direction: column;
-  flex: 1 0 0;
   align-items: stretch;
 `;
 
@@ -42,10 +40,13 @@ const ClassWrapper = styled.div`
   width: 100%;
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
 `;
 
 const LevelWrapper = styled.div`
-  width: 100%;
+  width: 60px;
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
+  
 `;
