@@ -13,8 +13,8 @@ function Background() {
 
     return(
         <BackgroundWrapper>
-            <label>Background:</label>
             <BiggerInput value={background} onChange={handleBackgroundChange} />
+            <label>Background</label>
         </BackgroundWrapper>
     );
 }
@@ -26,5 +26,4 @@ const BackgroundWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;

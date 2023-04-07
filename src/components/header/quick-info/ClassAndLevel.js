@@ -17,14 +17,14 @@ function ClassAndLevel() {
 
     return(
         <ClassAndLevelWrapper>
-            <ClassWrapper>
-                <BiggerInput value={characterClass} onChange={handleCharacterClassChange} />
-                <label>Class</label>
-            </ClassWrapper>
             <LevelWrapper>
                 <BiggerInput type={"number"} max={20} value={level} onChange={handleLevelChange} />
                 <label>Level</label>
             </LevelWrapper>
+            <ClassWrapper>
+                <BiggerInput value={characterClass} onChange={handleCharacterClassChange} />
+                <label>Class</label>
+            </ClassWrapper>
         </ClassAndLevelWrapper>
     );
 }
@@ -46,8 +46,6 @@ const ClassWrapper = styled.div`
 
 const LevelWrapper = styled.div`
   width: 60px;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  
 `;

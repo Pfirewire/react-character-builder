@@ -13,8 +13,8 @@ function Name() {
 
     return(
         <NameWrapper>
-            <label>Character Name: </label>
             <BiggerInput value={characterName} onChange={handleChange} />
+            <label>Character Name</label>
         </NameWrapper>
     );
 }
@@ -27,5 +27,4 @@ const NameWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 `;

@@ -13,8 +13,8 @@ function PlayerName() {
 
     return(
         <PlayerNameWrapper>
-            <label>Player Name:</label>
             <BiggerInput value={playerName} onChange={handlePlayerNameChange} />
+            <label>Player Name</label>
         </PlayerNameWrapper>
     );
 }
@@ -26,5 +26,4 @@ const PlayerNameWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
