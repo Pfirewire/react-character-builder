@@ -22,8 +22,8 @@ function PlayerName() {
 export default PlayerName;
 
 const PlayerNameWrapper = styled.div`
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1 0 0;
 `;

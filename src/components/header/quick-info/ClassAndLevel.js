@@ -35,17 +35,17 @@ const ClassAndLevelWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: stretch;
+  flex: 1 0 0;
 `;
 
 const ClassWrapper = styled.div`
   width: 100%;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
 `;
 
 const LevelWrapper = styled.div`
-  width: 60px;
+  width: 50px;
   display: flex;
   flex-direction: column;
 `;
