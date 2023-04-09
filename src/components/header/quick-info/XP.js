@@ -18,9 +18,9 @@ function XP() {
     return(
         <XPWrapper>
             <XPFieldWrapper>
-                <BiggerInput value={xp[0]} onChange={handleXPChange} />
+                <BiggerInput type={'number'} value={xp[0]} onChange={handleXPChange} />
                 <div>/</div>
-                <BiggerInput value={xp[1]} onChange={handleMaxXPChange} />
+                <BiggerInput type={'number'} value={xp[1]} onChange={handleMaxXPChange} />
             </XPFieldWrapper>
             <label>XP (current / max)</label>
         </XPWrapper>
