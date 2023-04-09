@@ -14,6 +14,14 @@ const characterSlice = createSlice({
             0,
             0
         ],
+        str: 10,
+        dex: 10,
+        con: 10,
+        wis: 10,
+        int: 10,
+        cha: 10,
+        inspiration: false,
+        proficiencyBonus: 0,
     },
     reducers: {
         setCharacterName(state, action) {
@@ -42,7 +50,31 @@ const characterSlice = createSlice({
         },
         setXPMax(state, action) {
             state.xp[1] = action.payload;
-        }
+        },
+        setStr(state, action) {
+            state.str = action.payload;
+        },
+        setDex(state, action) {
+            state.dex = action.payload;
+        },
+        setCon(state, action) {
+            state.con = action.payload;
+        },
+        setWis(state, action) {
+            state.wis = action.payload;
+        },
+        setInt(state, action) {
+            state.int = action.payload;
+        },
+        setCha(state, action) {
+            state.cha = action.payload;
+        },
+        setInspiration(state, action) {
+            state.inspiration = action.payload;
+        },
+        setProficiencyBonus(state, action) {
+            state.proficiencyBonus = action.payload;
+        },
     },
 });
 
@@ -56,6 +88,14 @@ export const {
     setAlignment,
     setXP,
     setXPMax,
+    setStr,
+    setDex,
+    setCon,
+    setWis,
+    setInt,
+    setCha,
+    setInspiration,
+    setProficiencyBonus,
 } = characterSlice.actions;
 
 export const characterReducer = characterSlice.reducer;
