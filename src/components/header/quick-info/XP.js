@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import {useDispatch, useSelector} from "react-redux";
 
 function XP() {
+    const dispatch = useDispatch();
+    const {xp} = useSelector(state => state.character);
     return(
         <XPWrapper>
             XP

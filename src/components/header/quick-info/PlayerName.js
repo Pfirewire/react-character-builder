@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";
-import {setBackground} from "../../../store/slices/characterSlice";
+import {setPlayerName} from "../../../store/slices/characterSlice";
 import {BiggerInput} from "../../styles/BiggerInput.styled";
 
 function PlayerName() {
@@ -8,7 +8,7 @@ function PlayerName() {
     const {playerName} = useSelector(state => state.character);
 
     const handlePlayerNameChange = e => {
-        dispatch(setBackground(e.target.value));
+        dispatch(setPlayerName(e.target.value));
     };
 
     return(
