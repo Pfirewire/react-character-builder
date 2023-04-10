@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
+import abilityScore from "../../components/body/stats/AbilityScore";
 
 const characterSlice = createSlice({
     name: 'character',
@@ -14,12 +15,14 @@ const characterSlice = createSlice({
             0,
             0
         ],
-        str: 10,
-        dex: 10,
-        con: 10,
-        wis: 10,
-        int: 10,
-        cha: 10,
+        abilityScore: {
+            STR: 10,
+            DEX: 10,
+            CON: 10,
+            WIS: 10,
+            INT: 10,
+            CHA: 10,
+        },
         inspiration: false,
         proficiencyBonus: 0,
     },
@@ -51,23 +54,12 @@ const characterSlice = createSlice({
         setXPMax(state, action) {
             state.xp[1] = action.payload;
         },
-        setStr(state, action) {
-            state.str = action.payload;
-        },
-        setDex(state, action) {
-            state.dex = action.payload;
-        },
-        setCon(state, action) {
-            state.con = action.payload;
-        },
-        setWis(state, action) {
-            state.wis = action.payload;
-        },
-        setInt(state, action) {
-            state.int = action.payload;
-        },
-        setCha(state, action) {
-            state.cha = action.payload;
+        setAbilityScore(state, action) {
+            console.log(action.payload);
+            state.abilityScore = {
+                ...state.abilityScore,
+                [action.payload.key]: parseInt(action.payload.value),
+            };
         },
         setInspiration(state, action) {
             state.inspiration = action.payload;
@@ -88,12 +80,7 @@ export const {
     setAlignment,
     setXP,
     setXPMax,
-    setStr,
-    setDex,
-    setCon,
-    setWis,
-    setInt,
-    setCha,
+    setAbilityScore,
     setInspiration,
     setProficiencyBonus,
 } = characterSlice.actions;

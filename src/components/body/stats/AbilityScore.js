@@ -1,9 +1,23 @@
 import styled from "styled-components";
+import {useDispatch, useSelector} from "react-redux";
+import {setAbilityScore} from "../../../store/slices/characterSlice";
+import {BiggerInput} from "../../styles/BiggerInput.styled";
+import {AbilityScoreInput} from "../../styles/AbilityScoreInput.styled";
 
-function AbilityScore({type}) {
+function AbilityScore({type, score}) {
+    const dispatch = useDispatch();
+
+    const handleAbilityScoreChange = e => {
+        dispatch(setAbilityScore({key: type, value: e.target.value}));
+    };
+
+    const bonus = Math.floor((score-10)/2);
+
     return(
         <AbilityScoreContainer>
-            {type}
+            <AbilityScoreInput type={'number'} width={'3'} value={score} onChange={handleAbilityScoreChange} />
+            <label>{type}</label>
+            <div>{bonus}</div>
         </AbilityScoreContainer>
     );
 }
@@ -14,6 +28,7 @@ const AbilityScoreContainer = styled.div`
   width: 80px;
   height: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
