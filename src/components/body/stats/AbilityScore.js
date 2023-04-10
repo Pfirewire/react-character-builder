@@ -17,7 +17,7 @@ function AbilityScore({type, score}) {
         <AbilityScoreContainer>
             <AbilityScoreInput type={'number'} width={'3'} value={score} onChange={handleAbilityScoreChange} />
             <label>{type}</label>
-            <div>{bonus}</div>
+            <div>{bonus >=0 ? '+' : ''}{bonus}</div>
         </AbilityScoreContainer>
     );
 }
