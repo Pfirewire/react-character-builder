@@ -7,15 +7,9 @@ import PlayerName from "./PlayerName";
 function TopQuickInfo() {
     return(
         <TopQuickInfoWrapper>
-            <QuickInfoWrapper>
-                <ClassAndLevel />
-            </QuickInfoWrapper>
-            <QuickInfoWrapper>
-                <Background />
-            </QuickInfoWrapper>
-            <QuickInfoWrapper>
-                <PlayerName />
-            </QuickInfoWrapper>
+            <ClassAndLevel />
+            <Background />
+            <PlayerName />
         </TopQuickInfoWrapper>
     );
 }

@@ -22,7 +22,7 @@ function XP() {
                 <div>/</div>
                 <BiggerInput type={'number'} value={xp[1]} onChange={handleMaxXPChange} />
             </XPFieldWrapper>
-            <label>XP (current / max)</label>
+            <label>XP</label>
         </XPWrapper>
     );
 }

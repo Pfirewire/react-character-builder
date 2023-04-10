@@ -25,5 +25,5 @@ const BackgroundWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
+  //flex: 1 0 0;
 `;

@@ -7,15 +7,9 @@ import XP from "./XP";
 function BottomQuickInfo() {
     return(
     <BottomQuickInfoWrapper>
-        <QuickInfoWrapper>
-            <Race />
-        </QuickInfoWrapper>
-        <QuickInfoWrapper>
-            <Alignment />
-        </QuickInfoWrapper>
-        <QuickInfoWrapper>
-            <XP />
-        </QuickInfoWrapper>
+        <Race />
+        <Alignment />
+        <XP />
     </BottomQuickInfoWrapper>
     );
 }
