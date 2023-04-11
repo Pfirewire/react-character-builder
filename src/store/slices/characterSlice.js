@@ -81,7 +81,6 @@ const characterSlice = createSlice({
             state.xp[1] = action.payload;
         },
         setAbilityScore(state, action) {
-            console.log(action.payload);
             state.abilityScore = {
                 ...state.abilityScore,
                 [action.payload.key]: parseInt(action.payload.value),
@@ -92,6 +91,15 @@ const characterSlice = createSlice({
         },
         setProficiencyBonus(state, action) {
             state.proficiencyBonus = action.payload;
+        },
+        setSavingThrow(state, action) {
+            state.savingThrow = {
+                ...state.savingThrow,
+                [action.payload.stat]: {
+                    ...[action.payload.stat],
+                    [action.payload.stat.key]: action.payload.value,
+                },
+            };
         },
     },
 });
@@ -109,6 +117,7 @@ export const {
     setAbilityScore,
     setInspiration,
     setProficiencyBonus,
+    setSavingThrow,
 } = characterSlice.actions;
 
 export const characterReducer = characterSlice.reducer;
