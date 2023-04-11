@@ -25,6 +25,32 @@ const characterSlice = createSlice({
         },
         inspiration: false,
         proficiencyBonus: 0,
+        savingThrow: {
+            STR: {
+                bonus: 0,
+                isProficient: false,
+            },
+            DEX: {
+                bonus: 0,
+                isProficient: false,
+            },
+            CON: {
+                bonus: 0,
+                isProficient: false,
+            },
+            WIS: {
+                bonus: 0,
+                isProficient: false,
+            },
+            INT: {
+                bonus: 0,
+                isProficient: false,
+            },
+            CHA: {
+                bonus: 0,
+                isProficient: false,
+            },
+        },
     },
     reducers: {
         setCharacterName(state, action) {

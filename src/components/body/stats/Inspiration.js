@@ -21,7 +21,7 @@ function Inspiration() {
 export default Inspiration;
 
 const InspirationWrapper = styled.div`
-  height: 60px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
