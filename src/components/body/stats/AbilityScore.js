@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";
 import {setAbilityScore} from "../../../store/slices/characterSlice";
-import {BiggerInput} from "../../styles/BiggerInput.styled";
 import {AbilityScoreInput} from "../../styles/AbilityScoreInput.styled";
 
 function AbilityScore({type, score}) {
