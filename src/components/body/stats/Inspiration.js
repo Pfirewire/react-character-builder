@@ -7,12 +7,12 @@ function Inspiration() {
     const {inspiration} = useSelector(state => state.character);
 
     const handleInspirationChange = e => {
-        dispatch(setInspiration(e.target.value));
+        dispatch(setInspiration(e.target.checked));
     };
 
     return(
         <InspirationWrapper>
-            <CheckboxInput type={'checkbox'} value={inspiration} onChange={handleInspirationChange} />
+            <CheckboxInput type={'checkbox'} checked={inspiration} onChange={handleInspirationChange} />
             <label>Inspiration</label>
         </InspirationWrapper>
     );

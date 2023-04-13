@@ -5,6 +5,7 @@ import {setSavingThrow} from "../../../store/slices/characterSlice";
 
 function SavingThrow({type, bonus, isProficient}) {
     const dispatch = useDispatch();
+    // console.log(`Bonus: ${bonus}, proficient: ${isProficient}`);
 
     const handleBonusChange = e => {
         dispatch(setSavingThrow({
@@ -18,13 +19,13 @@ function SavingThrow({type, bonus, isProficient}) {
         dispatch(setSavingThrow({
             stat: type,
             key: 'isProficient',
-            value: e.target.value,
+            value: e.target.checked,
         }));
     };
 
     return(
         <SavingThrowWrapper>
-            <input type={'checkbox'} value={isProficient} onChange={handleIsProficientChange} />
+            <input type={'checkbox'} value={isProficient} checked={isProficient} onChange={handleIsProficientChange} />
             <input type={'number'} value={bonus} onChange={handleBonusChange} />
             <label>{type}</label>
         </SavingThrowWrapper>
