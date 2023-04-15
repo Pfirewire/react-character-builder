@@ -81,32 +81,26 @@ const characterSlice = createSlice({
             state.xp[1] = action.payload;
         },
         setAbilityScore(state, action) {
-            console.log(state.abilityScore);
             state.abilityScore = {
                 ...state.abilityScore,
                 [action.payload.key]: parseInt(action.payload.value),
             };
+            console.log(state.abilityScore);
         },
         setInspiration(state, action) {
-            console.log(state);
-            console.log(state.inspiration);
             state.inspiration = action.payload;
-            console.log(state.inspiration);
         },
         setProficiencyBonus(state, action) {
             state.proficiencyBonus = action.payload;
         },
         setSavingThrow(state, action) {
-            console.log(state.savingThrow);
-            console.log(action);
             state.savingThrow = {
                 ...state.savingThrow,
                 [action.payload.stat]: {
-                    ...[action.payload.stat],
-                    [action.payload.stat.key]: action.payload.value,
+                    ...state.savingThrow[action.payload.stat],
+                    [action.payload.key]: action.payload.value,
                 },
             };
-            // console.log(state.character);
         },
     },
 });
