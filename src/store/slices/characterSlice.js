@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit";
-import abilityScore from "../../components/body/stats/AbilityScore";
 
 const characterSlice = createSlice({
     name: 'character',
@@ -85,7 +84,6 @@ const characterSlice = createSlice({
                 ...state.abilityScore,
                 [action.payload.key]: parseInt(action.payload.value),
             };
-            console.log(state.abilityScore);
         },
         setInspiration(state, action) {
             state.inspiration = action.payload;
