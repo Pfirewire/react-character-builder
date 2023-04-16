@@ -5,7 +5,6 @@ import {setSavingThrow} from "../../../store/slices/characterSlice";
 
 function SavingThrow({type, bonus, isProficient}) {
     const dispatch = useDispatch();
-    // console.log(`Bonus: ${bonus}, proficient: ${isProficient}`);
 
     const handleBonusChange = e => {
         dispatch(setSavingThrow({
