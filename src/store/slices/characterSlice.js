@@ -16,26 +16,32 @@ const characterSlice = createSlice({
         ],
         abilityScore: {
             STR: {
+                name: 'Strength',
                 value: 10,
                 isProficient: false,
             },
             DEX: {
+                name: 'Dexterity',
                 value: 10,
                 isProficient: true,
             },
             CON: {
+                name: 'Constitution',
                 value: 10,
                 isProficient: false,
             },
             WIS: {
+                name: 'Wisdom',
                 value: 10,
                 isProficient: false,
             },
             INT: {
+                name: 'Intelligence',
                 value: 10,
                 isProficient: false,
             },
             CHA: {
+                name: 'Charisma',
                 value: 10,
                 isProficient: true,
             },
