@@ -3,17 +3,22 @@ import SavingThrow from "./SavingThrow";
 import {useSelector} from "react-redux";
 
 function SavingThrows() {
-    const {savingThrow} = useSelector(state => state.character);
+    const {abilityScore} = useSelector(state => state.character);
+
+    const renderSavingThrows = () => {
+        let renderedSavingThrows = [];
+        for(const key of Object.entries(abilityScore)) {
+            renderedSavingThrows.push(
+                <SavingThrow key={key[0]} type={key[0]} abilityScore={abilityScore[key[0]].value} isProficient={abilityScore[key[0]].isProficient} />
+            );
+        }
+        return renderedSavingThrows;
+    }
 
     return(
         <SavingThrowsWrapper>
-            <SavingThrow type={'STR'} bonus={savingThrow.STR.bonus} isProficient={savingThrow.STR.isProficient} />
-            <SavingThrow type={'DEX'} bonus={savingThrow.DEX.bonus} isProficient={savingThrow.DEX.isProficient} />
-            <SavingThrow type={'CON'} bonus={savingThrow.CON.bonus} isProficient={savingThrow.CON.isProficient} />
-            <SavingThrow type={'WIS'} bonus={savingThrow.WIS.bonus} isProficient={savingThrow.WIS.isProficient} />
-            <SavingThrow type={'INT'} bonus={savingThrow.INT.bonus} isProficient={savingThrow.INT.isProficient} />
-            <SavingThrow type={'CHA'} bonus={savingThrow.CHA.bonus} isProficient={savingThrow.CHA.isProficient} />
-            SavingThrows
+            {renderSavingThrows()}
+            <p>SavingThrows</p>
         </SavingThrowsWrapper>
     );
 }
@@ -22,4 +27,7 @@ export default SavingThrows;
 
 const SavingThrowsWrapper = styled.div`
   height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

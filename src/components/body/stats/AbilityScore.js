@@ -7,16 +7,19 @@ function AbilityScore({type, score}) {
     const dispatch = useDispatch();
 
     const handleAbilityScoreChange = e => {
-        dispatch(setAbilityScore({key: type, value: e.target.value}));
+        dispatch(setAbilityScore({stat: type, key: 'value', value: parseInt(e.target.value)}));
     };
 
-    const bonus = Math.floor((score-10)/2);
+    const prettyModifier = () =>{
+        const bonus = Math.floor((score-10)/2);
+        return `${bonus >=0 ? '+' : ''}${bonus}`;
+    };
 
     return(
         <AbilityScoreContainer>
             <AbilityScoreInput type={'number'} width={'3'} value={score} onChange={handleAbilityScoreChange} />
             <label>{type}</label>
-            <div>{bonus >=0 ? '+' : ''}{bonus}</div>
+            <div>{prettyModifier()}</div>
         </AbilityScoreContainer>
     );
 }

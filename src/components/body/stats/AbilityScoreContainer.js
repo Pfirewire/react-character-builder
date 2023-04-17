@@ -1,18 +1,24 @@
 import AbilityScore from "./AbilityScore";
 import styled from "styled-components";
 import {useSelector} from "react-redux";
+import SavingThrow from "./SavingThrow";
 
 function AbilityScoreContainer() {
     const {abilityScore} = useSelector(state => state.character);
 
+    const renderedAbilityScores = () => {
+        let renderedAbilityScores = [];
+        for(const key of Object.entries(abilityScore)) {
+            renderedAbilityScores.push(
+                <AbilityScore key={key[0]} type={key[0]} score={abilityScore[key[0]].value} />
+            );
+        }
+        return renderedAbilityScores;
+    };
+
     return(
         <AbilityScoreWrapper>
-            <AbilityScore type={'STR'} score={[abilityScore.STR]} />
-            <AbilityScore type={'DEX'} score={[abilityScore.DEX]} />
-            <AbilityScore type={'CON'} score={[abilityScore.CON]} />
-            <AbilityScore type={'WIS'} score={[abilityScore.WIS]} />
-            <AbilityScore type={'INT'} score={[abilityScore.INT]} />
-            <AbilityScore type={'CHA'} score={[abilityScore.CHA]} />
+            {renderedAbilityScores()}
         </AbilityScoreWrapper>
     );
 }

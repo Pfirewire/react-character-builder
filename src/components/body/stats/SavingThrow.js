@@ -1,32 +1,29 @@
 import styled from "styled-components";
-import {useDispatch} from "react-redux";
-import {setSavingThrow} from "../../../store/slices/characterSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {setAbilityScore, setSavingThrow} from "../../../store/slices/characterSlice";
 
 
-function SavingThrow({type, bonus, isProficient}) {
+function SavingThrow({type, abilityScore, isProficient}) {
     const dispatch = useDispatch();
-
-    const handleBonusChange = e => {
-        dispatch(setSavingThrow({
-            stat: type,
-            key: 'bonus',
-            value: parseInt(e.target.value),
-        }));
-    };
+    const {proficiencyBonus} = useSelector(state => state.character);
 
     const handleIsProficientChange = e => {
-        dispatch(setSavingThrow({
+        dispatch(setAbilityScore({
             stat: type,
             key: 'isProficient',
             value: e.target.checked,
         }));
     };
 
+    const prettyModifier = () =>{
+        const bonus = Math.floor((abilityScore - 10)/2) + (isProficient ? proficiencyBonus : 0);
+        return `${bonus >=0 ? '+' : ''}${bonus}`;
+    };
+
     return(
         <SavingThrowWrapper>
             <input type={'checkbox'} value={isProficient} checked={isProficient} onChange={handleIsProficientChange} />
-            <input type={'number'} value={bonus} onChange={handleBonusChange} />
-            <label>{type}</label>
+            <label>{prettyModifier()}{type}</label>
         </SavingThrowWrapper>
     );
 }

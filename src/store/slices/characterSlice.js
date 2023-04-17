@@ -15,41 +15,33 @@ const characterSlice = createSlice({
             0
         ],
         abilityScore: {
-            STR: 10,
-            DEX: 10,
-            CON: 10,
-            WIS: 10,
-            INT: 10,
-            CHA: 10,
-        },
-        inspiration: true,
-        proficiencyBonus: 0,
-        savingThrow: {
             STR: {
-                bonus: 0,
+                value: 10,
                 isProficient: false,
             },
             DEX: {
-                bonus: 0,
+                value: 10,
                 isProficient: true,
             },
             CON: {
-                bonus: 0,
+                value: 10,
                 isProficient: false,
             },
             WIS: {
-                bonus: 0,
+                value: 10,
                 isProficient: false,
             },
             INT: {
-                bonus: 0,
+                value: 10,
                 isProficient: false,
             },
             CHA: {
-                bonus: 0,
-                isProficient: false,
+                value: 10,
+                isProficient: true,
             },
         },
+        inspiration: true,
+        proficiencyBonus: 0,
     },
     reducers: {
         setCharacterName(state, action) {
@@ -82,7 +74,10 @@ const characterSlice = createSlice({
         setAbilityScore(state, action) {
             state.abilityScore = {
                 ...state.abilityScore,
-                [action.payload.key]: parseInt(action.payload.value),
+                [action.payload.stat]: {
+                    ...state.abilityScore[action.payload.stat],
+                    [action.payload.key]: action.payload.value,
+                }
             };
         },
         setInspiration(state, action) {
@@ -90,15 +85,6 @@ const characterSlice = createSlice({
         },
         setProficiencyBonus(state, action) {
             state.proficiencyBonus = action.payload;
-        },
-        setSavingThrow(state, action) {
-            state.savingThrow = {
-                ...state.savingThrow,
-                [action.payload.stat]: {
-                    ...state.savingThrow[action.payload.stat],
-                    [action.payload.key]: action.payload.value,
-                },
-            };
         },
     },
 });

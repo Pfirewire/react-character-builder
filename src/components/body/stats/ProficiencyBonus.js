@@ -7,7 +7,7 @@ function ProficiencyBonus() {
     const {proficiencyBonus} = useSelector(state => state.character);
 
     const handleProficiencyBonusChange = e => {
-        dispatch(setProficiencyBonus(e.target.value));
+        dispatch(setProficiencyBonus(parseInt(e.target.value)));
     };
 
     return(
