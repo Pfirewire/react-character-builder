@@ -9,7 +9,13 @@ function SavingThrows() {
         let renderedSavingThrows = [];
         for(const key of Object.entries(abilityScore)) {
             renderedSavingThrows.push(
-                <SavingThrow key={key[0]} type={key[0]} abilityScore={abilityScore[key[0]].value} isProficient={abilityScore[key[0]].isProficient} />
+                <SavingThrow
+                    key={key[0]}
+                    type={key[0]}
+                    name={abilityScore[key[0]].name}
+                    abilityScore={abilityScore[key[0]].value}
+                    isProficient={abilityScore[key[0]].isProficient}
+                />
             );
         }
         return renderedSavingThrows;

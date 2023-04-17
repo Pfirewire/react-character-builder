@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setAbilityScore, setSavingThrow} from "../../../store/slices/characterSlice";
 
 
-function SavingThrow({type, abilityScore, isProficient}) {
+function SavingThrow({type, name, abilityScore, isProficient}) {
     const dispatch = useDispatch();
     const {proficiencyBonus} = useSelector(state => state.character);
 
@@ -23,7 +23,7 @@ function SavingThrow({type, abilityScore, isProficient}) {
     return(
         <SavingThrowWrapper>
             <SavingThrowInput type={'checkbox'} value={isProficient} checked={isProficient} onChange={handleIsProficientChange} />
-            <SavingThrowLabel>{prettyModifier()} {type}</SavingThrowLabel>
+            <SavingThrowLabel>{prettyModifier()} {name}</SavingThrowLabel>
         </SavingThrowWrapper>
     );
 }
@@ -45,5 +45,5 @@ const SavingThrowLabel = styled.div`
   align-items: center;
   font-size: 1.1em;
   height: 23px;
-  width: 75px;
+  width: 120px;
 `;
