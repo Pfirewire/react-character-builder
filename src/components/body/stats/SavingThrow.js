@@ -22,8 +22,8 @@ function SavingThrow({type, abilityScore, isProficient}) {
 
     return(
         <SavingThrowWrapper>
-            <input type={'checkbox'} value={isProficient} checked={isProficient} onChange={handleIsProficientChange} />
-            <label>{prettyModifier()}{type}</label>
+            <SavingThrowInput type={'checkbox'} value={isProficient} checked={isProficient} onChange={handleIsProficientChange} />
+            <SavingThrowLabel>{prettyModifier()} {type}</SavingThrowLabel>
         </SavingThrowWrapper>
     );
 }
@@ -34,4 +34,12 @@ const SavingThrowWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const SavingThrowInput = styled.input`
+  width: 45px;
+`;
+
+const SavingThrowLabel = styled.div`
+  width: 60px;
 `;
