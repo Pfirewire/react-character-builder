@@ -37,7 +37,7 @@ const SavingThrowWrapper = styled.div`
 `;
 
 const SavingThrowInput = styled.input`
-  width: 45px;
+  width: 30px;
 `;
 
 const SavingThrowLabel = styled.div`
@@ -45,5 +45,5 @@ const SavingThrowLabel = styled.div`
   align-items: center;
   font-size: 1.1em;
   height: 23px;
-  width: 120px;
+  width: 200px;
 `;
