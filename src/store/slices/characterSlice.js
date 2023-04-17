@@ -19,108 +19,138 @@ const characterSlice = createSlice({
                 name: 'Strength',
                 score: 10,
                 isProficient: false,
+                skills: [
+                    {
+                        name: 'Athletics',
+                        additionalModifiers: [
+                        ]
+                    },
+                ],
             },
             DEX: {
                 name: 'Dexterity',
                 score: 10,
                 isProficient: true,
+                skills: [
+                    {
+                        name: 'Acrobatics',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Slight of Hand',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Stealth',
+                        additionalModifiers: [
+                        ]
+                    },
+                ],
             },
             CON: {
                 name: 'Constitution',
                 score: 10,
                 isProficient: false,
+                skills: [
+                ],
             },
             WIS: {
                 name: 'Wisdom',
                 score: 10,
                 isProficient: false,
+                skills: [
+                    {
+                        name: 'Animal Handling',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Insight',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Medicine',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Perception',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Survival',
+                        additionalModifiers: [
+                        ]
+                    },
+                ],
             },
             INT: {
                 name: 'Intelligence',
                 score: 10,
                 isProficient: false,
+                skills: [
+                    {
+                        name: 'Arcana',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'History',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Investigation',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Nature',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Religion',
+                        additionalModifiers: [
+                        ]
+                    },
+                ],
             },
             CHA: {
                 name: 'Charisma',
                 score: 10,
                 isProficient: true,
+                skills: [
+                    {
+                        name: 'Deception',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Intimidation',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Performance',
+                        additionalModifiers: [
+                        ]
+                    },
+                    {
+                        name: 'Persuasion',
+                        additionalModifiers: [
+                        ]
+                    },
+                ],
             },
         },
         inspiration: true,
         proficiencyBonus: 0,
         skills: [
-            {
-                name: 'Acrobatics',
-                abilityScore: 'DEX',
-            },
-            {
-                name: 'Animal Handling',
-                abilityScore: 'WIS',
-            },
-            {
-                name: 'Arcana',
-                abilityScore: 'INT',
-            },
-            {
-                name: 'Athletics',
-                abilityScore: 'STR',
-            },
-            {
-                name: 'Deception',
-                abilityScore: 'CHA',
-            },
-            {
-                name: 'History',
-                abilityScore: 'INT',
-            },
-            {
-                name: 'Insight',
-                abilityScore: 'WIS',
-            },
-            {
-                name: 'Intimidation',
-                abilityScore: 'CHA',
-            },
-            {
-                name: 'Investigation',
-                abilityScore: 'INT',
-            },
-            {
-                name: 'Medicine',
-                abilityScore: 'WIS',
-            },
-            {
-                name: 'Nature',
-                abilityScore: 'INT',
-            },
-            {
-                name: 'Perception',
-                abilityScore: 'WIS',
-            },
-            {
-                name: 'Performance',
-                abilityScore: 'CHA',
-            },
-            {
-                name: 'Persuasion',
-                abilityScore: 'CHA',
-            },
-            {
-                name: 'Religion',
-                abilityScore: 'INT',
-            },
-            {
-                name: 'Slight of Hand',
-                abilityScore: 'DEX',
-            },
-            {
-                name: 'Stealth',
-                abilityScore: 'DEX',
-            },
-            {
-                name: 'Survival',
-                abilityScore: 'WIS',
-            },
         ]
     },
     reducers: {
