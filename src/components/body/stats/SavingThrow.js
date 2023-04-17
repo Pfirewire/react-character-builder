@@ -41,5 +41,9 @@ const SavingThrowInput = styled.input`
 `;
 
 const SavingThrowLabel = styled.div`
-  width: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  height: 23px;
+  width: 75px;
 `;
