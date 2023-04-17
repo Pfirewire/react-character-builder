@@ -10,7 +10,7 @@ function AbilityScoreContainer() {
         let renderedAbilityScores = [];
         for(const key of Object.entries(abilityScore)) {
             renderedAbilityScores.push(
-                <AbilityScore key={key[0]} type={key[0]} score={abilityScore[key[0]].value} />
+                <AbilityScore key={key[0]} type={key[0]} score={abilityScore[key[0]].score} />
             );
         }
         return renderedAbilityScores;

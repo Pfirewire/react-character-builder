@@ -6,7 +6,7 @@ function AbilityScore({type, score}) {
     const dispatch = useDispatch();
 
     const handleAbilityScoreChange = e => {
-        dispatch(setAbilityScore({stat: type, key: 'value', value: parseInt(e.target.value)}));
+        dispatch(setAbilityScore({stat: type, key: 'score', value: parseInt(e.target.value)}));
     };
 
     const prettyModifier = () =>{

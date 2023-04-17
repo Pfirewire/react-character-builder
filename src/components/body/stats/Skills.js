@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import {useSelector} from "react-redux";
+import Skill from "./Skill";
 
 function Skills() {
-    const {skills} = useSelector(state => state.character);
+    const {skills, abilityScore} = useSelector(state => state.character);
 
     const renderedSkills = skills.map(skill => {
-
+        return (
+            <Skill key={skill.name} name={skill.name} abilityScore={skill.abilityScore} bonus={abilityScore[skill.abilityScore].score} isProficient={abilityScore[skill.abilityScore].isProficient} />
+        );
     });
 
     return(
         <SkillsWrapper>
-            Skills
+            {renderedSkills}
         </SkillsWrapper>
     );
 }

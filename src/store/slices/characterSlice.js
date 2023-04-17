@@ -17,32 +17,32 @@ const characterSlice = createSlice({
         abilityScore: {
             STR: {
                 name: 'Strength',
-                value: 10,
+                score: 10,
                 isProficient: false,
             },
             DEX: {
                 name: 'Dexterity',
-                value: 10,
+                score: 10,
                 isProficient: true,
             },
             CON: {
                 name: 'Constitution',
-                value: 10,
+                score: 10,
                 isProficient: false,
             },
             WIS: {
                 name: 'Wisdom',
-                value: 10,
+                score: 10,
                 isProficient: false,
             },
             INT: {
                 name: 'Intelligence',
-                value: 10,
+                score: 10,
                 isProficient: false,
             },
             CHA: {
                 name: 'Charisma',
-                value: 10,
+                score: 10,
                 isProficient: true,
             },
         },
@@ -52,92 +52,74 @@ const characterSlice = createSlice({
             {
                 name: 'Acrobatics',
                 abilityScore: 'DEX',
-                isProficient: false,
             },
             {
                 name: 'Animal Handling',
                 abilityScore: 'WIS',
-                isProficient: false,
             },
             {
                 name: 'Arcana',
                 abilityScore: 'INT',
-                isProficient: false,
             },
             {
                 name: 'Athletics',
                 abilityScore: 'STR',
-                isProficient: false,
             },
             {
                 name: 'Deception',
                 abilityScore: 'CHA',
-                isProficient: false,
             },
             {
                 name: 'History',
                 abilityScore: 'INT',
-                isProficient: false,
             },
             {
                 name: 'Insight',
                 abilityScore: 'WIS',
-                isProficient: false,
             },
             {
                 name: 'Intimidation',
                 abilityScore: 'CHA',
-                isProficient: false,
             },
             {
                 name: 'Investigation',
                 abilityScore: 'INT',
-                isProficient: false,
             },
             {
                 name: 'Medicine',
                 abilityScore: 'WIS',
-                isProficient: false,
             },
             {
                 name: 'Nature',
                 abilityScore: 'INT',
-                isProficient: false,
             },
             {
                 name: 'Perception',
                 abilityScore: 'WIS',
-                isProficient: false,
             },
             {
                 name: 'Performance',
                 abilityScore: 'CHA',
-                isProficient: false,
             },
             {
                 name: 'Persuasion',
                 abilityScore: 'CHA',
-                isProficient: false,
             },
             {
                 name: 'Religion',
                 abilityScore: 'INT',
-                isProficient: false,
             },
             {
                 name: 'Slight of Hand',
                 abilityScore: 'DEX',
-                isProficient: false,
             },
             {
                 name: 'Stealth',
                 abilityScore: 'DEX',
-                isProficient: false,
             },
             {
                 name: 'Survival',
                 abilityScore: 'WIS',
-                isProficient: false,
             },
         ]
     },
@@ -200,7 +182,6 @@ export const {
     setAbilityScore,
     setInspiration,
     setProficiencyBonus,
-    setSavingThrow,
 } = characterSlice.actions;
 
 export const characterReducer = characterSlice.reducer;

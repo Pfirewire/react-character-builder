@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function Skill() {
+function Skill({name, abilityScore, isProficient}) {
     return(
         <SkillWrapper>
             Skill
