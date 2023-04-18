@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {calculateBonus} from "../../util/calculateBonus";
 
 const characterSlice = createSlice({
     name: 'character',
@@ -18,6 +19,7 @@ const characterSlice = createSlice({
             STR: {
                 name: 'Strength',
                 score: 10,
+                bonus: 0,
                 isProficient: false,
                 skills: [
                     {
@@ -30,6 +32,7 @@ const characterSlice = createSlice({
             DEX: {
                 name: 'Dexterity',
                 score: 10,
+                bonus: 0,
                 isProficient: true,
                 skills: [
                     {
@@ -52,6 +55,7 @@ const characterSlice = createSlice({
             CON: {
                 name: 'Constitution',
                 score: 10,
+                bonus: 0,
                 isProficient: false,
                 skills: [
                 ],
@@ -59,6 +63,7 @@ const characterSlice = createSlice({
             WIS: {
                 name: 'Wisdom',
                 score: 10,
+                bonus: 0,
                 isProficient: false,
                 skills: [
                     {
@@ -91,6 +96,7 @@ const characterSlice = createSlice({
             INT: {
                 name: 'Intelligence',
                 score: 10,
+                bonus: 0,
                 isProficient: false,
                 skills: [
                     {
@@ -123,6 +129,7 @@ const characterSlice = createSlice({
             CHA: {
                 name: 'Charisma',
                 score: 10,
+                bonus: 0,
                 isProficient: true,
                 skills: [
                     {
@@ -188,6 +195,7 @@ const characterSlice = createSlice({
                     [action.payload.key]: action.payload.value,
                 }
             };
+            state.abilityScore[action.payload.stat].bonus = calculateBonus(state.abilityScore[action.payload.stat].score);
         },
         setInspiration(state, action) {
             state.inspiration = action.payload;
