@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";
-import {setAbilityScore} from "../../../store/slices/characterSlice";
+import {setAbilityScore, setArmorClass} from "../../../store/slices/characterSlice";
 
 function AbilityScore({type, score}) {
     const dispatch = useDispatch();
 
     const handleAbilityScoreChange = e => {
+        if(type === 'DEX') {
+            dispatch(setArmorClass(e.target.value));
+        }
         dispatch(setAbilityScore({stat: type, key: 'score', value: parseInt(e.target.value)}));
     };
 

@@ -150,8 +150,7 @@ const characterSlice = createSlice({
         },
         inspiration: true,
         proficiencyBonus: 0,
-        skills: [
-        ]
+        armorClass: 10,
     },
     reducers: {
         setCharacterName(state, action) {
@@ -196,6 +195,9 @@ const characterSlice = createSlice({
         setProficiencyBonus(state, action) {
             state.proficiencyBonus = action.payload;
         },
+        setArmorClass(state, action) {
+            state.armorClass = action.payload;
+        }
     },
 });
 
@@ -212,6 +214,7 @@ export const {
     setAbilityScore,
     setInspiration,
     setProficiencyBonus,
+    setArmorClass,
 } = characterSlice.actions;
 
 export const characterReducer = characterSlice.reducer;
