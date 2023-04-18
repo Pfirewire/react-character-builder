@@ -11,7 +11,7 @@ function SavingThrows() {
             renderedSavingThrows.push(
                 <SavingThrow
                     key={key[0]}
-                    type={key[0]}
+                    abilityScoreType={key[0]}
                     name={abilityScore[key[0]].name}
                     abilityScore={abilityScore[key[0]].score}
                     isProficient={abilityScore[key[0]].isProficient}
@@ -23,7 +23,9 @@ function SavingThrows() {
 
     return(
         <SavingThrowsWrapper>
-            {renderSavingThrows()}
+            <div>
+                {renderSavingThrows()}
+            </div>
             <p>SavingThrows</p>
         </SavingThrowsWrapper>
     );
@@ -32,8 +34,9 @@ function SavingThrows() {
 export default SavingThrows;
 
 const SavingThrowsWrapper = styled.div`
-  height: 160px;
+  height: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 `;

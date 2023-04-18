@@ -3,13 +3,13 @@ import {useDispatch, useSelector} from "react-redux";
 import {setAbilityScore, setSavingThrow} from "../../../store/slices/characterSlice";
 
 
-function SavingThrow({type, name, abilityScore, isProficient}) {
+function SavingThrow({name, abilityScoreType, abilityScore, isProficient}) {
     const dispatch = useDispatch();
     const {proficiencyBonus} = useSelector(state => state.character);
 
     const handleIsProficientChange = e => {
         dispatch(setAbilityScore({
-            stat: type,
+            stat: abilityScoreType,
             key: 'isProficient',
             value: e.target.checked,
         }));
@@ -34,6 +34,7 @@ const SavingThrowWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3px;
 `;
 
 const SavingThrowInput = styled.input`

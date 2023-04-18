@@ -12,8 +12,8 @@ function Skills() {
             skills.push(...key[1].skills.map(skill => {
                 return {
                     skillName: skill.name,
-                    abilityScore: key[0],
-                    score: key[1].score,
+                    abilityScoreType: key[0],
+                    abilityScore: key[1].score,
                     isProficient: key[1].isProficient,
                 };
             }));
@@ -21,14 +21,17 @@ function Skills() {
         skills.sort((a, b) => a.skillName.localeCompare(b.skillName));
         return skills.map(skill => {
             return (
-                <Skill key={skill.skillName} name={skill.skillName} abilityScore={skill.abilityScore} score={skill.score} isProficient={skill.isProficient} />
+                <Skill key={skill.skillName} skillName={skill.skillName} abilityScoreType={skill.abilityScoreType} abilityScore={skill.abilityScore} isProficient={skill.isProficient} />
             );
         });
     };
 
     return(
         <SkillsWrapper>
-            {renderedSkills()}
+            <div>
+                {renderedSkills()}
+            </div>
+            <p>Skills</p>
         </SkillsWrapper>
     );
 }
@@ -36,5 +39,9 @@ function Skills() {
 export default Skills;
 
 const SkillsWrapper = styled.div`
-  height: 510px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `;
