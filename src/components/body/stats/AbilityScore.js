@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setAbilityScore, setArmorClass} from "../../../store/slices/characterSlice";
 
-function AbilityScore({type, score}) {
+function AbilityScore({type, score, bonus}) {
     const dispatch = useDispatch();
 
     const handleAbilityScoreChange = e => {
@@ -13,7 +13,6 @@ function AbilityScore({type, score}) {
     };
 
     const prettyModifier = () =>{
-        const bonus = Math.floor((score-10)/2);
         return `${bonus >=0 ? '+' : ''}${bonus}`;
     };
 

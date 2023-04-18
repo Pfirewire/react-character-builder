@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {useSelector} from "react-redux";
 
-function Skill({skillName, abilityScoreType, abilityScore, isProficient}) {
+function Skill({skillName, abilityScoreType, abilityScoreBonus, isProficient}) {
     const {proficiencyBonus} = useSelector(state => state.character);
 
     const handleIsProficientChange = e => {
@@ -9,7 +9,9 @@ function Skill({skillName, abilityScoreType, abilityScore, isProficient}) {
     };
 
     const prettyModifier = () =>{
-        const bonus = Math.floor((abilityScore - 10)/2) + (isProficient ? proficiencyBonus : 0);
+        console.log(abilityScoreBonus);
+        const bonus = abilityScoreBonus + (isProficient ? proficiencyBonus : 0);
+        console.log(bonus);
         return `${bonus >=0 ? '+' : ''}${bonus}`;
     };
 

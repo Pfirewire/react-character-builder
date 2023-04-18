@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setAbilityScore, setSavingThrow} from "../../../store/slices/characterSlice";
 
 
-function SavingThrow({name, abilityScoreType, abilityScore, isProficient}) {
+function SavingThrow({name, abilityScoreType, abilityScoreBonus, isProficient}) {
     const dispatch = useDispatch();
     const {proficiencyBonus} = useSelector(state => state.character);
 
@@ -16,7 +16,7 @@ function SavingThrow({name, abilityScoreType, abilityScore, isProficient}) {
     };
 
     const prettyModifier = () =>{
-        const bonus = Math.floor((abilityScore - 10)/2) + (isProficient ? proficiencyBonus : 0);
+        const bonus = abilityScoreBonus + (isProficient ? proficiencyBonus : 0);
         return `${bonus >=0 ? '+' : ''}${bonus}`;
     };
 

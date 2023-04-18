@@ -13,15 +13,16 @@ function Skills() {
                 return {
                     skillName: skill.name,
                     abilityScoreType: key[0],
-                    abilityScore: key[1].score,
+                    abilityScoreBonus: key[1].bonus,
                     isProficient: key[1].isProficient,
                 };
             }));
         }
         skills.sort((a, b) => a.skillName.localeCompare(b.skillName));
+        console.log(skills);
         return skills.map(skill => {
             return (
-                <Skill key={skill.skillName} skillName={skill.skillName} abilityScoreType={skill.abilityScoreType} abilityScore={skill.abilityScore} isProficient={skill.isProficient} />
+                <Skill key={skill.skillName} skillName={skill.skillName} abilityScoreType={skill.abilityScoreType} abilityScoreBonus={skill.abilityScoreBonus} isProficient={skill.isProficient} />
             );
         });
     };

@@ -13,7 +13,7 @@ function SavingThrows() {
                     key={key[0]}
                     abilityScoreType={key[0]}
                     name={abilityScore[key[0]].name}
-                    abilityScore={abilityScore[key[0]].score}
+                    abilityScoreBonus={abilityScore[key[0]].bonus}
                     isProficient={abilityScore[key[0]].isProficient}
                 />
             );
