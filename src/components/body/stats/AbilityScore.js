@@ -16,7 +16,7 @@ function AbilityScore({type, score}) {
 
     return(
         <AbilityScoreContainer>
-            <label>{type}</label>
+            <AbilityScoreLabel>{type}</AbilityScoreLabel>
             <AbilityScoreInput type={'number'} width={'3'} value={score} onChange={handleAbilityScoreChange} />
             <ModifierWrapper>{prettyModifier()}</ModifierWrapper>
         </AbilityScoreContainer>
@@ -34,6 +34,10 @@ const AbilityScoreContainer = styled.div`
   justify-content: center;
 `;
 
+const AbilityScoreLabel = styled.label`
+  font-size: 1.5em;
+`;
+
 const AbilityScoreInput = styled.input`
   //::-webkit-outer-spin-button,
   //::-webkit-inner-spin-button {
@@ -48,7 +52,7 @@ const AbilityScoreInput = styled.input`
   //  -moz-appearance: number-input;
   //}
   width: 75px;
-  font-size: 2.7em;
+  font-size: 2.5em;
   text-align: center;
   padding-top: 6px;
 `;
