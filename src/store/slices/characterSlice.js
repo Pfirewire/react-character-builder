@@ -158,6 +158,7 @@ const characterSlice = createSlice({
         inspiration: true,
         proficiencyBonus: 0,
         armorClass: 10,
+        speed: 30,
     },
     reducers: {
         setCharacterName(state, action) {
