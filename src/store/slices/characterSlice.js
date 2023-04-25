@@ -159,6 +159,10 @@ const characterSlice = createSlice({
         proficiencyBonus: 0,
         armorClass: 10,
         speed: 30,
+        hp: [
+            10,
+            10
+        ],
     },
     reducers: {
         setCharacterName(state, action) {
@@ -206,6 +210,12 @@ const characterSlice = createSlice({
         },
         setArmorClass(state, action) {
             state.armorClass = action.payload;
+        },
+        setCurrentHP(state, action) {
+            state.hp[0] = action.payload;
+        },
+        setMaximumHP(state, action) {
+            state.hp[1] = action.payload;
         }
     },
 });
@@ -224,6 +234,8 @@ export const {
     setInspiration,
     setProficiencyBonus,
     setArmorClass,
+    setCurrentHP,
+    setMaximumHP
 } = characterSlice.actions;
 
 export const characterReducer = characterSlice.reducer;

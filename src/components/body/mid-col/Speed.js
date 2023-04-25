@@ -7,7 +7,7 @@ function Speed() {
     return(
         <SpeedWrapper>
             <SpeedValueWrapper>
-                {speed} ft
+                {speed}ft
             </SpeedValueWrapper>
             <SpeedTextWrapper>
                 Speed
